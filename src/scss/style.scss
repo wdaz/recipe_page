@@ -1,0 +1,13 @@
+@import "fonts";
+@import "./test/variable";
+body {
+    background-color: var(--primary);
+    display: grid;
+    font-family: HankenGrotesk;
+
+    span {
+        color: #000;
+    }
+
+    // background: url("@img/nature.jpg") 0 0 no-repeat;
+}
