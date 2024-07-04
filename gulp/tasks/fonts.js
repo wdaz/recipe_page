@@ -44,6 +44,7 @@ export const fontsStyle = () => {
                 for (var i = 0; i < fontsFiles.length; i++) {
                     let fontFileName = fontsFiles[i].split('.')[0];
                     if (newFileOnly !== fontFileName) {
+                        console.log(fontFileName)
                         let fontName = fontFileName.split('-')[0] ? fontFileName.split('-')[0] : fontFileName;
                         let fontWeight = fontFileName.split('-')[1] ? fontFileName.split('-')[1] : fontFileName;
                         if (fontWeight.toLowerCase() === 'thin') {

@@ -5,11 +5,10 @@
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
-    "start": "npm-run-all -s dev svgSprive",
+    "start": "npm-run-all -s dev",
     "dev": "gulp",
-    "build": "npm-run-all -p prod svgSprive",
-    "prod": "gulp build --build",
-    "svgSprive": "gulp svgSprive"
+    "build": "npm-run-all -p prod ",
+    "prod": "gulp build --build"
   },
   "devDependencies": {
     "browser-sync": "^2.29.3",
