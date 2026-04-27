@@ -1,0 +1,13 @@
+diff --git a/node_modules/gulp-cli/lib/shared/require-or-import.js b/node_modules/gulp-cli/lib/shared/require-or-import.js
+index 6970ae4..2a699b9 100644
+--- a/node_modules/gulp-cli/lib/shared/require-or-import.js
++++ b/node_modules/gulp-cli/lib/shared/require-or-import.js
+@@ -18,7 +18,7 @@ function requireOrImport(path, callback) {
+   try {
+     cjs = require(path);
+   } catch (e) {
+-    if (pathToFileURL && importESM && e.code === 'ERR_REQUIRE_ESM') {
++    if (pathToFileURL && importESM && (e.code === 'ERR_REQUIRE_ESM' || e.code === 'ERR_REQUIRE_ASYNC_MODULE')) {
+       // This is needed on Windows, because import() fails if providing a Windows file path.
+       var url = pathToFileURL(path);
+       importESM(url).then(function(esm) { callback(null, esm); }, callback);
